@@ -1,5 +1,5 @@
 {
-  "name": "@dalenguyen/typescript-package-starter",
+  "name": "typescript-package-starter",
   "version": "1.0.0",
   "description": "TypeScript boilerplate for NPM or Github Packages",
   "main": "dist/index.js",
@@ -36,6 +36,6 @@
     "node": ">=8"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com/@dalenguyen"
   }
 }
