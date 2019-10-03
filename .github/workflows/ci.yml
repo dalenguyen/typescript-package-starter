@@ -1,4 +1,4 @@
-name: Node CI
+name: Publish to GitHub Package Registry
 
 on: [push]
 
@@ -9,6 +9,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+        with:
+          registry-url: https://npm.pkg.github.com/
     - name: Use Node.js 8.x
       uses: actions/setup-node@v1
       with:
@@ -20,11 +23,6 @@ jobs:
         npm test      
     - name: publish
       env:
-        PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-        NPM_REGISTRY_URL: https://npm.pkg.github.com
-        EMAIL: ${{ secrets.EMAIL }}
+        NODE_AUTH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
       run: |
-        npm adduser --registry=$NPM_REGISTRY_URL --always-auth
-        npm config set "$NPM_REGISTRY_URL:_authToken" $PERSONAL_ACCESS_TOKEN
-        npm config set email=$EMAIL
         npm run deploy
