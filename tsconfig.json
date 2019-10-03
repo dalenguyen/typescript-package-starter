@@ -9,7 +9,7 @@
       "target": "es5",
       "declaration": true,
       "types": [
-        "mocha", "node", "chai"
+        "jest", "node"
       ]
     },
     "compileOnSave": true,
