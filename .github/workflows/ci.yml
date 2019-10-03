@@ -24,7 +24,7 @@ jobs:
         NPM_REGISTRY_URL: https://npm.pkg.github.com
         EMAIL: ${{ secrets.EMAIL }}
       run: |
-        npm config set _auth $PERSONAL_ACCESS_TOKEN
         npm adduser --registry=$NPM_REGISTRY_URL --always-auth
+        npm config set "$NPM_REGISTRY_URL:_authToken" $PERSONAL_ACCESS_TOKEN
         npm config set email=$EMAIL
         npm run deploy
