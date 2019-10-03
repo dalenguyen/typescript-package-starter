@@ -9,13 +9,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - uses: actions/setup-node@v1
-        with:
-          registry-url: https://npm.pkg.github.com/
     - name: Use Node.js 8.x
       uses: actions/setup-node@v1
       with:
+        registry-url: https://npm.pkg.github.com/
         node-version: 8.x
+        scope: '@dalenguyen'
     - name: npm install, build, and test
       run: |
         npm install
