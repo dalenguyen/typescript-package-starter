@@ -1,6 +1,6 @@
 {
   "name": "typescript-package-starter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "TypeScript boilerplate for NPM or Github Packages",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -22,14 +22,14 @@
     "url": "git+https://github.com/dalenguyen/typescript-package-starter.git"
   },
   "devDependencies": {
-    "@types/chai": "^4.2.2",
+    "@types/chai": "^4.2.7",
     "@types/mocha": "^5.2.7",
-    "@types/node": "^12.7.5",
+    "@types/node": "^13.1.8",
     "chai": "^4.2.0",
-    "mocha": "^5.2.0",
-    "tslint": "^5.20.0",
-    "ts-node": "^8.3.0",
-    "typescript": "~3.6.3"
+    "mocha": "^7.0.0",
+    "tslint": "^6.0.0",
+    "ts-node": "^8.6.2",
+    "typescript": "~3.7.5"
   },
   "dependencies": {},
   "engines": {
