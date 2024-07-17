@@ -1,5 +1,5 @@
 {
-  "name": "typescript-package-starter",
+  "name": "@dalenguyen/typescript-package-starter",
   "version": "2.0.0",
   "description": "TypeScript boilerplate for NPM or Github Packages",
   "type": "module",
