@@ -1,19 +1,16 @@
 {
-    "compilerOptions": {
-      "lib": ["es2017"],
-      "module": "commonjs",
-      "noImplicitReturns": true,    
-      "esModuleInterop": true,
-      "outDir": "dist",
-      "sourceMap": true,
-      "target": "es5",
-      "declaration": true,
-      "types": [
-        "mocha", "node", "chai"
-      ]
-    },
-    "compileOnSave": true,
-    "include": [
-      "src"
-    ]
-  }
+  "compilerOptions": {
+    "lib": ["ESNext"],
+    "module": "ESNext",
+    "noImplicitReturns": true,
+    "esModuleInterop": true,
+    "outDir": "dist",
+    "sourceMap": true,
+    "target": "ESNext",
+    "declaration": true,
+    "isolatedDeclarations": true,
+    "types": ["node", "vitest/globals"]
+  },
+  "compileOnSave": true,
+  "include": ["src"]
+}

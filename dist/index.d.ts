@@ -1,1 +1,1 @@
-export declare const helloWorld: () => string;
+export declare const helloWorld: (name?: string) => string;

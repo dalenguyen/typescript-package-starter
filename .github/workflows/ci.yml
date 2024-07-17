@@ -4,24 +4,23 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js 14.x
-      uses: actions/setup-node@v1
-      with:
-        registry-url: https://npm.pkg.github.com/
-        node-version: 14.x
-        scope: '@dalenguyen'
-    - name: npm install, build, and test
-      run: |
-        npm install
-        npm run build --if-present
-        npm test      
-    - name: publish
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-      run: |
-        npm run deploy
+      - uses: actions/checkout@v4
+      - name: Use Node.js 18.x
+        uses: actions/setup-node@v4
+        with:
+          registry-url: https://npm.pkg.github.com/
+          node-version: 18.x
+          scope: "@dalenguyen"
+      - name: pnpm install, build, and test
+        run: |
+          pnpm install
+          pnpm build --if-present
+          pnpm test
+      - name: publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        run: |
+          pnpm run deploy
