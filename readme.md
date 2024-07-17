@@ -5,17 +5,17 @@ TypeScript boilerplate for NPM or Github Packages
 ## Build project
 
 ```sh
-npm run build
+ pnpm build
 ```
 
-## Test pacakge
+## Test package
 
 ```sh
-npm test
+pnpm test
 ```
 
 ## Deploy package
 
 ```sh
-npm run deploy
+pnpm deploy
 ```
